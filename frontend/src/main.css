@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+section.section1{
+  background-color: #202020;
+}
+
+nav.nav-bar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+}
+
+li.nav-buttons{
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  transition: .5s ease;
+  line-height: 1.9;
+  padding-right: 2vw;
+}
+
+li.nav-logo{
+  padding-right: 5vw;
+}
+
+li.nav-buttons, li.nav-logo, li.cart, li.user, li.drop-down{
+  list-style: none;
+}
+
+ul.user-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li.cart{
+  font-size: 36px;
+  color: #ffffff;
+  padding-right: 15px;
+}
+
+li.user{
+  font-size: 36px;
+  color: #ffffff;
+}
+
+li.drop-down{
+  color: #ffffff;
+}
