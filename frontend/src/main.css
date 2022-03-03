@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins&family=Roboto&display=swap');
 
 *{
   margin: 0px;
@@ -27,7 +27,7 @@ li.nav-buttons{
 }
 
 li.nav-logo{
-  padding-right: 5vw;
+  padding-right: 15vw;
 }
 
 li.nav-buttons, li.nav-logo, li.cart, li.user, li.drop-down{
@@ -38,6 +38,7 @@ ul.user-links{
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-left: 15vw;
 }
 
 li.cart{
@@ -53,4 +54,62 @@ li.user{
 
 li.drop-down{
   color: #ffffff;
+}
+
+article.hero{
+  margin-top: 200px;
+}
+
+h1.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 76px;
+  line-height: 72px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  font-family: "Grand Hotel", cursive;
+  transition: none 0s ease 0s;
+  text-align: center;
+  margin-bottom: 50px;
+  border-width: 0px;
+  white-space: normal;
+  max-width: 399px;
+  color: #ffffff;
+  transform-origin: 50% 50% 0px;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+p.subtitle1{
+  font-size: 15px;
+  line-height: 60px;
+  font-weight: 300;
+  color: rgb(255, 255, 255,0.7);
+  letter-spacing: 0px;
+  font-family: Roboto, sans-serif;
+  transition: none 0s ease 0s;
+  text-align: center;
+  margin-bottom: 20px;
+  border-width: 0px;
+  transform-origin: 50% 50% 0px;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+p.subtitle2{
+  min-width: 497px;
+  max-width: 497px;
+  white-space: normal;
+  font-size: 13px;
+  line-height: 26px;
+  font-weight: 300;
+  color: rgb(255, 255, 255,0.7);
+  letter-spacing: 0px;
+  font-family: Roboto, sans-serif;
+  transition: none 0s ease 0s;
+  text-align: center;
+  margin: auto;
+  border-width: 0px;
+  transform-origin: 50% 50% 0px;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
