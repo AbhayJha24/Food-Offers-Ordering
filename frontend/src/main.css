@@ -57,6 +57,7 @@ li.drop-down{
 }
 
 article.hero{
+  position: relative;
   margin-top: 200px;
 }
 
@@ -112,4 +113,24 @@ p.subtitle2{
   border-width: 0px;
   transform-origin: 50% 50% 0px;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+img.hamburger, img.food, img.leaves, img.pizza{
+  position: absolute;
+}
+
+img.hamburger{
+  left: 0px;
+}
+
+img.leaves{
+  right: 30vw;
+}
+
+img.food{
+  left: 20vw;
+}
+
+img.pizza{
+  right: 0px;
 }
