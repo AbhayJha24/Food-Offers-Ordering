@@ -33,6 +33,11 @@ function Main() {
         <p className="subtitle1">Lorem ipsum dolor sit amet purus.</p>
         <h1 className="title">Delicious food at your door step</h1>
         <p className="subtitle2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minus velit nisi soluta, necessitatibus deleniti? Officia est voluptas rem placeat ipsa, modi molestias consequuntur distinctio blanditiis. Incidunt rerum inventore eaque?</p>
+        <form className="search-holder">
+          <span className="location"><i class="las la-map-marker"></i></span>
+          <input type="text" className="search" placeholder="Your Address" id="" />
+          <button className="searchButton">Check for Food Delivery</button>
+        </form>
       </article>
     </section>
     </>

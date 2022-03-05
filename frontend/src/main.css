@@ -58,7 +58,10 @@ li.drop-down{
 
 article.hero{
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin-top: 200px;
+  padding-bottom: 100px;
 }
 
 h1.title{
@@ -121,6 +124,7 @@ img.hamburger, img.food, img.leaves, img.pizza{
 
 img.hamburger{
   left: 0px;
+  bottom: 0px;
 }
 
 img.leaves{
@@ -132,5 +136,66 @@ img.food{
 }
 
 img.pizza{
-  right: 0px;
+  right: -200px;
+}
+
+form.search-holder{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 100px;
+  column-gap: 1vw;
+  background-color: #2d2d2d;
+  border-radius: 50rem;
+  padding: 10px;
+  width: 45%;
+  height: 50px;
+}
+
+span.location{
+  font-size: 26px;
+  color: #595959;
+}
+
+input.search{
+  color: #595959;
+  font-size: 16px;
+  background-color: inherit;
+  outline: none;
+  width: 75%;
+  height: 50px;
+  border: none;
+}
+
+input.search::placeholder{
+  color: #595959;
+  font-size: 16px;
+}
+
+button.searchButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #fc2547;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 35px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  /* letter-spacing: 0.1em; */
+  text-align: center;
+  transition: .8s ease;
+  text-decoration: none;
+  background-image: linear-gradient(to right,#fc2547 0%, #ff5a00 50%, #fc2547 100%);
+  background-size: 200% auto;
+  border-radius: 50rem;
+  width: 45%;
+  height: 50px;
+}
+
+button:hover{
+  background-position: right center;
+  cursor: pointer;
 }
