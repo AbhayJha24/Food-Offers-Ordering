@@ -85,6 +85,14 @@ h1.title{
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 
+h1.title2{
+    color: #ffffff;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
 p.subtitle1{
   font-size: 15px;
   line-height: 60px;
@@ -116,6 +124,16 @@ p.subtitle2{
   border-width: 0px;
   transform-origin: 50% 50% 0px;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+p.subtitle3{
+  background: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 30px;
 }
 
 img.hamburger, img.food, img.leaves, img.pizza{
@@ -198,4 +216,47 @@ button.searchButton{
 button:hover{
   background-position: right center;
   cursor: pointer;
+}
+
+section.section2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191919;
+  padding: 7%;
+  column-gap: 20%;
+}
+
+article.foodDescription{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+}
+
+article.foodIcons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 45%;
+}
+
+span.foodIcon{
+  background: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: .5s ease;
+}
+
+h1.section2Nos{
+  color: #ffffffc0;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+p.section2Text{
+  color: #ffffff;
 }

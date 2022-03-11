@@ -40,6 +40,29 @@ function Main() {
         </form>
       </article>
     </section>
+    <section className="section2">
+      <article className="foodDescription">
+        <p className="subtitle3">Basic info about online food.</p>
+        <h1 className="title2">delicious food is our aim.</h1>
+      </article>
+      <article className="foodIcons">
+        <div>
+          <span className="foodIcon"><i class="las la-brush"></i></span>
+          <h1 className="section2Nos">1052+</h1>
+          <p className="section2Text">Online Orders</p>
+        </div>
+        <div>
+        <span className="foodIcon"><i class="las la-pizza-slice"></i></span>
+          <h1 className="section2Nos">9800+</h1>
+          <p className="section2Text">Satisfied Customers </p>
+          </div>
+        <div>
+        <span className="foodIcon"><i class="las la-mug-hot"></i></span>
+          <h1 className="section2Nos">3785+</h1>
+          <p className="section2Text">Cup of Teas</p>
+          </div>
+      </article>
+    </section>
     </>
   )
 }
