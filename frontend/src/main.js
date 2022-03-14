@@ -4,6 +4,12 @@ import hamburger from './images/hamburger.png'
 import pizza from './images/pizza.png'
 import leaves from './images/leaves.png'
 import food from './images/food.png'
+import item1 from './images/item1.png'
+import item2 from './images/item2.png'
+import item3 from './images/item3.png'
+import item4 from './images/item4.png'
+import item5 from './images/item5.png'
+import item6 from './images/item6.png'
 
 function Main() {
   return (
@@ -61,6 +67,104 @@ function Main() {
           <h1 className="section2Nos">3785+</h1>
           <p className="section2Text">Cup of Teas</p>
           </div>
+      </article>
+    </section>
+    <section className="section3">
+      <article className="foodCard">
+        <img src={item1} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">Mega Restaurant</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
+      </article>
+      <article className="foodCard">
+        <img src={item2} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">The Fast Food</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
+      </article>
+      <article className="foodCard">
+        <img src={item3} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">Green Bakery</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
+      </article>
+      <article className="foodCard">
+        <img src={item4} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">Eat Frio</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
+      </article>
+      <article className="foodCard">
+        <img src={item5} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">Turkish Cousine</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
+      </article>
+      <article className="foodCard">
+        <img src={item6} alt="" className="foodCardImage" />
+        <div className="itemDetailsArea">
+          <div className="cardNameRating">
+          <h4 className="itemCardName">Pizzario</h4>
+          <ul className="itemCardRating">
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+            <li className="star"><i class="las la-star"></i></li>
+          </ul>
+          </div>
+          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
+        </div>
       </article>
     </section>
     </>

@@ -227,6 +227,18 @@ section.section2{
   column-gap: 20%;
 }
 
+section.section3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 5%;
+  row-gap: 80px;
+  background-color: #191919;
+  padding: 7%;
+  padding-top: 2%;
+}
+
 article.foodDescription{
   display: flex;
   flex-direction: column;
@@ -259,4 +271,52 @@ h1.section2Nos{
 
 p.section2Text{
   color: #ffffff;
+}
+
+article.foodCard{
+  width: 350px;
+}
+
+div.itemDetailsArea{
+  padding: 20px;
+  background-color: #0d0d0d;
+}
+
+div.cardNameRating{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 5em;
+}
+
+ul.itemCardRating{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li.star{
+  list-style: none;
+  color: #ffd000;
+}
+
+img.foodCardImage{
+  display: block;
+  margin: auto;
+}
+
+h4.itemCardName{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: .5s ease;
+}
+
+p.itemCardDescription{
+  margin-top: 10px;
+  /* margin-left: 5px; */
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
 }
