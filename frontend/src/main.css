@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Poppins&family=Roboto&display=swap');
 
+
+@keyframes pulse {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.2);} 
+  100%{transform: scale(1);} 
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -239,10 +246,36 @@ section.section3{
   padding-top: 2%;
 }
 
+section.section4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191919;
+  padding-bottom: 50px;
+}
+
+button.more-food{
+  border: solid 1px #fc2547;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 35px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  /* letter-spacing: 0.1em; */
+  text-align: center;
+  overflow: hidden;
+  transition: .8s ease;
+  text-decoration: none;
+  background-image: linear-gradient(to right,#fc2547 0%, #ff5a00 50%, #fc2547 100%);
+  background-size: 200% auto;
+}
+
 article.foodDescription{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 25vw;
 }
@@ -319,4 +352,50 @@ p.itemCardDescription{
   font-size: 16px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.7);
+}
+
+article.about-desc{
+  width: 25vw;
+}
+
+p.about-para{
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+section.section5{
+  display: flex;
+  column-gap: 5%;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c;
+  padding-bottom: 50px;
+}
+
+section.section6{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c;
+  padding: 7%;
+  column-gap: 20%;
+}
+
+span.about-icon, span.about-icon-active{
+  font-size: 100px;
+}
+
+article.about-card{
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  width: 12%;
+}
+
+article.about-card span.about-icon-active i{
+  background: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: .8s pulse infinite;
 }

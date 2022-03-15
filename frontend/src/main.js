@@ -167,6 +167,33 @@ function Main() {
         </div>
       </article>
     </section>
+    <section className="section4">
+      <button className="more-food">Browse More Food Options</button>
+    </section>
+    <section className="section6">
+    <article className="foodDescription">
+        <p className="subtitle3">Basic info about food delivery.</p>
+        <h1 className="title2">we are behind the delicious food delivery.</h1>
+      </article>
+      <article className="about-desc">
+        <p className="about-para">Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, vel tristique risus faucibus.</p>
+        <p className="about-para">Curabitur mollis bibendum luctus. Duis suscipit vitae dui sed suscipit. Vestibulum auctor nunc vitae diam eleifend, in maximus metus sollicitudin. Quisque vitae sodales lectus.</p>
+      </article>
+    </section>
+    <section className="section5">
+      <article className="about-card">
+      <span className="about-icon"><i class="las la-lightbulb"></i></span>
+      <p className="about-card-text">We have new ideas for your food business.</p>
+      </article>
+      <article className="about-card">
+      <span className="about-icon-active"><i class="las la-bicycle"></i></span>
+      <p className="about-card-text">Join our amazing delivery staff.</p>
+      </article>
+      <article className="about-card">
+      <span className="about-icon"><i class="lar la-heart"></i></span>
+      <p className="about-card-text">We love our valued food customers.</p>
+      </article>
+    </section>
     </>
   )
 }
