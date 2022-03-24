@@ -1,0 +1,248 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src='jquery.min.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>BROWSE</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+	
+	.body{
+		font-family :Verdana, sans-serif;
+		}
+		
+	#sec1{
+		
+		height:60%;
+		width:30%;
+		background-color:#242424;
+		}
+	
+	#sec2{
+		position:absolute;
+		left:30%;
+		top:0%;
+		height:60%;
+		width:40%;
+		background-color:#242424;
+		text-align:center;
+		}
+		
+	#sec3{
+		position:absolute;
+		left:70%;
+		top:0%;
+		height:60%;
+		width:30%;
+		background-color:#242424;
+		}
+		
+	a[target="tag"]{
+		text-decoration: none;
+		color:white;
+		}
+	a[target="tag"]:hover{
+		background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		}
+		
+	#bro{
+		font-family: 'Grand Hotel', cursive;
+		background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-size:80px;
+		padding-top:100px;
+		}
+		
+	a[target="tag2"]{
+		text-decoration: none;
+		color:#919191;
+		}
+	a[target="tag2"]:hover{
+		color:white;
+		}
+		
+	#sec4{
+		padding:7% 11% 7% 11%;
+		background-color:#161616;
+		height:170%;
+		width:100%;
+		}
+	
+	#filter{
+		width:21%;
+		}
+		
+	#dd1{
+		position:absolute;
+		left:32%;
+		top:73%;
+		}
+		
+	#dd2{
+		position:absolute;
+		left:53%;
+		top:73%;
+		}
+	
+	#fil{
+		position:absolute;
+		left:78%;
+		top:73%;
+		padding:10px 50px 10px 50px;
+		font-size:17px;
+		border-radius:50px;
+		background-image: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+		}
+		
+	#fil:hover{
+		background-image: linear-gradient(to right,#ff5a00 40%, #fc2547 100%);
+		}
+		
+	#fil1{
+		position:absolute;
+		left:36%;
+		top:210%;
+		padding:10px 110px 10px 110px;
+		font-size:17px;
+		border-radius:50px;
+		background-image: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+		}
+		
+	#fil1:hover{
+		background-image: linear-gradient(to right,#ff5a00 40%, #fc2547 100%);
+		}	
+		
+	#ddb1{
+		padding:10px 27px 10px 20px;
+		font-size:17px;
+		background: #161616;
+		}
+		
+	#ddb2{
+		padding:10px 27px 10px 20px;
+		font-size:17px;
+		background: #161616;
+		}
+		
+	.card{
+		background-color:black;
+		color:white;
+		}
+
+</style>
+</head>
+
+<body>
+
+	<div id="sec1">
+	
+	</div>
+	<div id="sec2">
+		<div style="font-size:23px; padding-top:25px;" id="tabs">
+			<a href="#" target="tag">Browse Food</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" target="tag">About Us</a>
+		</div>
+		<div >
+			<h1 id="bro">Browse Our Food</h1>
+		</div>
+		<div>
+			<a href="#" target="tag2">Home</a>
+			<a style="color:#919191">&nbsp;&nbsp;/&nbsp;&nbsp;</a>
+			<a href="#" target="tag2">Restaurant Listing</a>
+		</div>
+	</div>
+	<div id="sec3">
+		<i class="fa fa-shopping-bag" style="font-size:30px; padding:25px; color:white;"></i>
+		<i class="fa fa-user" style="font-size:30px; padding:25px; color:white;"></i>
+	</div>
+	<div id="sec4">
+		
+		<div>
+			<input type="range" id="filter" class="form-range" min="0" max="2000" id="customRange2">
+			<div class="dropdown" id="dd1">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="ddb1" data-bs-toggle="dropdown" aria-expanded="false">
+			  <i class="fa fa-cutlery"></i>&nbsp;&nbsp;&nbsp; Restautant Type
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item" href="#">Mega Restaurant</a></li>
+				<li><a class="dropdown-item" href="#">The Fast Food</a></li>
+				<li><a class="dropdown-item" href="#">Green Bakery</a></li>
+			  </ul>
+			</div>
+			<div class="dropdown" id="dd2">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="ddb2" data-bs-toggle="dropdown" aria-expanded="false">
+			   <i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp; Restautant Location
+			  </button>
+			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+				<li><a class="dropdown-item" href="#">Chennai</a></li>
+				<li><a class="dropdown-item" href="#">Madurai</a></li>
+				<li><a class="dropdown-item" href="#">ABC</a></li>
+			  </ul>
+			</div>
+			<button type="button" id="fil" class="btn btn-danger"><b>FILTER</b></button>
+		</div>
+		
+		<div id="foods">
+			<div class="card" style="width: 22rem; position:absolute; top:90%; left:11%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+			
+			<div class="card" style="width: 22rem; position:absolute; top:90%; left:38%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+			
+			<div class="card" style="width: 22rem; position:absolute; top:90%; left:65%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+			<div class="card" style="width: 22rem; position:absolute; top:145%; left:11%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+			
+			<div class="card" style="width: 22rem; position:absolute; top:145%; left:38%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+			
+			<div class="card" style="width: 22rem; position:absolute; top:145%; left:65%;">
+				<img src="steak.png" class="card-img-top" alt="...">
+				<div class="card-body">
+				<p class="card-text"><b>Food Item</b></p>
+				<p class="card-text">description</p>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button" id="fil1" class="btn btn-danger"><b>Load More Food Options</b></button>
+
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</html>
