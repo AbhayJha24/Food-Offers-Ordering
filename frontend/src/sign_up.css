@@ -1,0 +1,111 @@
+h1[target="pad"] {
+    background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
+
+}
+
+h1[target="pd"] {
+    color: white;
+
+}
+
+h1[target="pda"] {
+    color: gray;
+    font-size: 20px;
+
+}
+
+h1 {
+    margin-bottom: 3%;
+}
+
+a {
+    color: #797979; 
+    text-decoration: none!important;
+}
+
+#r_pic {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#sign-up {
+    position: absolute;
+    left: 0;
+    background-color: #1f1f1f;
+    height: 100%;
+    width: 50%;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 17%;
+    text-align: center;
+}
+
+#form-block {
+    position: relative;
+    top: 8%;
+    padding: 0 25%;
+}
+
+#login-btn {
+    background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+    position: absolute;
+    left: 0;
+}
+
+#link-signup {
+    position: absolute;
+    right: 0;
+}
+
+#link-signup:hover {
+    color: #fc2547;
+}
+
+.inp {
+    background-color: black;
+    border: none;
+}
+
+.btn-parent {
+    position: relative;
+}
+
+.foot-link {
+    position: absolute;
+}
+
+.foot-link:hover {
+    color: aliceblue;
+}
+
+.content {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    /* background-color: red; */
+    height: 50%;
+    width: 50%;
+}
+
+#home {
+    left: 0;
+}
+
+#browse {
+    right: 0;
+}
+
+#about {
+    left: 0;
+    bottom: 0;
+}

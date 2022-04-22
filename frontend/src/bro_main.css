@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+
+.body{
+    font-family :Verdana, sans-serif;
+    }
+
+.card-img-top{
+    position: initial!important;
+}
+    
+#sec1{
+    
+    height:36em;
+    width:30%;
+    background-color:#242424;
+    }
+
+#sec2{
+    position:absolute;
+    left:30%;
+    top:0em;
+    height:36em;
+    width:40%;
+    background-color:#242424;
+    text-align:center;
+    }
+    
+#sec3{
+    position:absolute;
+    left:70%;
+    top:0em;
+    height:36em;
+    width:30%;
+    background-color:#242424;
+    }
+    
+a[target="tag"]{
+    text-decoration: none;
+    color:white;
+    }
+a[target="tag"]:hover{
+    background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    
+#bro{
+    font-family: 'Grand Hotel', cursive;
+    background: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:80px;
+    padding-top:100px;
+    }
+    
+a[target="tag2"]{
+    text-decoration: none;
+    color:#919191;
+    }
+a[target="tag2"]:hover{
+    color:white;
+    }
+    
+#sec4{
+    padding:7% 11% 7% 11%;
+    background-color:#161616;
+    height:100em;
+    width:100%;
+    }
+
+#filter{
+    width:21%;
+    }
+    
+#dd1{
+    position:absolute;
+    left:32%;
+    top:73%;
+    }
+    
+#dd2{
+    position:absolute;
+    left:53%;
+    top:73%;
+    }
+
+#fil{
+    position:absolute;
+    left:78%;
+    top:73%;
+    padding:10px 50px 10px 50px;
+    font-size:17px;
+    border-radius:50px;
+    background-image: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+    }
+    
+#fil:hover{
+    background-image: linear-gradient(to right,#ff5a00 40%, #fc2547 100%);
+    }
+    
+#fil1{
+    position:absolute;
+    left:36%;
+    top:120em;
+    padding:10px 110px 10px 110px;
+    font-size:17px;
+    border-radius:50px;
+    background-image: linear-gradient(to right,#fc2547 40%, #ff5a00 100%);
+    }
+    
+#fil1:hover{
+    background-image: linear-gradient(to right,#ff5a00 40%, #fc2547 100%);
+    }	
+    
+#ddb1{
+    padding:10px 27px 10px 20px;
+    font-size:17px;
+    background: #161616;
+    }
+    
+#ddb2{
+    padding:10px 27px 10px 20px;
+    font-size:17px;
+    background: #161616;
+    }
+    
+.card{
+    background-color: #000000!important;
+    color:white;
+    }

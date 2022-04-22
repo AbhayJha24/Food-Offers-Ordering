@@ -7,6 +7,17 @@
   100%{transform: scale(1);} 
 }
 
+::-webkit-scrollbar{
+  background: #202020;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(30deg,#fc2547 50%, #ff5a00 100%);
+    height: 25%;
+    border-radius: 20px;
+    transition: .5s ease;
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -37,6 +48,12 @@ li.nav-logo{
   padding-right: 15vw;
 }
 
+img.logo{
+  position: initial!important;
+  width: initial!important;
+  height: initial!important;
+}
+
 li.nav-buttons, li.nav-logo, li.cart, li.user, li.drop-down{
   list-style: none;
 }
@@ -54,12 +71,171 @@ li.cart{
   padding-right: 15px;
 }
 
+li.cart:hover{
+  cursor: pointer;
+}
+
 li.user{
   font-size: 36px;
   color: #ffffff;
 }
 
 li.drop-down{
+  color: #ffffff;
+}
+
+.cart-empty{
+  text-align: center;
+  color: #ffffff55;
+}
+
+.minicart-link-false{
+  position: absolute;
+  background: #191919;
+  /* opacity: 0; */
+  padding: 35px 25px 25px 25px;
+  right: 20rem;
+  top: 70px;
+  transition: all 0.5s ease 0s;
+  width: 360px;
+  z-index: 9;
+  box-shadow: 0 12px 24px 0 rgb(0 0 0 / 30%);
+  border-radius: 20px;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+
+.minicart-link-true{
+  position: absolute;
+  background: #191919;
+  /* opacity: 0; */
+  padding: 35px 25px 25px 25px;
+  right: 20rem;
+  top: 70px;
+  transition: all 0.5s ease 0s;
+  width: 360px;
+  z-index: 9;
+  box-shadow: 0 12px 24px 0 rgb(0 0 0 / 30%);
+  border-radius: 20px;
+  visibility: visible;
+  transform: translateY(10px);
+}
+
+.minicart-content{
+  height: 300px;
+  overflow-y: scroll;
+  /* display: block; */
+  margin-bottom: 22px;
+  margin-left: 0;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.row-minicart{
+  display: flex;
+  /* border: 1px dashed #ffffff; */
+  flex-wrap: wrap;
+  padding: 5%;
+  margin-bottom: 10px;
+}
+
+.cart-img{
+  width: 6em!important;
+  height: 5em;
+}
+
+.cart-img img{
+  position: initial!important;
+  width: 5em;
+  height: 5em;
+}
+
+.cart-content{
+  width: 50%!important;
+  /* border: 1px solid #ff5a00; */
+}
+
+.cart-content h4{
+  font-size: 16px;
+}
+
+.cart-content .cart-price span{
+  color: #ffffff98;
+}
+
+.cart-content .number span{
+  color: #ffffff;
+}
+
+.cart-content .number input{
+  width: 1.5em;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.total-price{
+  border-top: 1px solid #FFFFFF;
+  overflow: hidden;
+  padding-top: 25px;
+  margin-top: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ml-0{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.ml-0 li{
+  width: 100%;
+}
+
+.total-price{
+  margin-bottom: 20px;
+}
+
+.f-right{
+  color: #ffffff;
+}
+
+.checkout-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-btn{
+  border: solid 1px #fc2547;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px 35px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  /* letter-spacing: 0.1em; */
+  text-align: center;
+  overflow: hidden;
+  /* transition: .8s ease; */
+  text-decoration: none;
+  background-image: linear-gradient(to right,#fc2547 0%, #ff5a00 50%, #fc2547 100%);
+  background-size: 200% auto;
+}
+
+.checkout-btn:hover{
   color: #ffffff;
 }
 
@@ -144,23 +320,33 @@ p.subtitle3{
 }
 
 img.hamburger, img.food, img.leaves, img.pizza{
-  position: absolute;
+  position: absolute!important;
+  width: initial!important;
+  height: initial!important;
 }
 
 img.hamburger{
+  width: initial!important;
+  height: initial!important;
   left: 0px;
   bottom: 0px;
 }
 
 img.leaves{
+  width: initial!important;
+  height: initial!important;
   right: 30vw;
 }
 
 img.food{
+  width: initial!important;
+  height: initial!important;
   left: 20vw;
 }
 
 img.pizza{
+  width: initial!important;
+  height: initial!important;
   right: -200px;
 }
 
@@ -308,6 +494,11 @@ p.section2Text{
 
 article.foodCard{
   width: 350px;
+  overflow: hidden;
+}
+
+article.foodCard:hover{
+  cursor: pointer;
 }
 
 div.itemDetailsArea{
@@ -334,8 +525,16 @@ li.star{
 }
 
 img.foodCardImage{
+  position: initial!important;
+  width: initial!important;
+  height: initial!important;
   display: block;
   margin: auto;
+  transition: transform 0.1s ease;
+}
+
+img.foodCardImage:hover{
+  transform: scale(1.1);
 }
 
 h4.itemCardName{

@@ -10,26 +10,63 @@ import item3 from './images/item3.png'
 import item4 from './images/item4.png'
 import item5 from './images/item5.png'
 import item6 from './images/item6.png'
+import {useState} from 'react'
+import jsCookie from 'js-cookie'
+import Minicart from './minicart'
+import FoodCards from './foodCards'
 
 function Main() {
+
+  const [minicart, setMinicart] = useState(false);
+
+  const showMiniCart = () => {
+    if (!minicart) {
+      setMinicart(true);
+    }
+  }
+
+  const removeMiniCart = () => {
+    if (minicart) {
+      setMinicart(false);
+    }
+  }
+
   return (
     <>
     <section className="section1">
       <nav className="nav-bar">
         <li className="nav-logo"><img src={logo} alt="Logo" className="logo" /></li>
-        <li className="nav-buttons">Browse Food</li>
-        <li className="nav-buttons">About Us</li>
+        <a href="/browse"><li className="nav-buttons">Browse Food</li></a>
+        <a href="#about"><li className="nav-buttons">About Us</li></a>
         <ul className="user-links">
-          <li className="cart">
-          <i class="las la-shopping-bag"></i>
+          <li className="cart" onMouseOver={showMiniCart} onMouseLeave={removeMiniCart}>
+          <i className="las la-shopping-bag"></i>
           </li>
           <li className="user">
-          <i class="las la-user"></i>
+          <i className="las la-user"></i>
           </li>
           <li className="drop-down">
-          <i class="las la-angle-down"></i>
+          <i className="las la-angle-down"></i>
           </li>
         </ul>
+        <div className={`minicart-link-${minicart}`} onMouseOver={showMiniCart} onMouseLeave={removeMiniCart}>
+          <div className="minicart-content">
+            <Minicart />
+        </div>
+      <ul className="ml-0">
+              <li>
+                  <div className="total-price">
+                      {/* <span className="f-left">Total:</span> */}
+                      <span className="f-right">₹239.9</span>
+                  </div>
+              </li>
+              <li>
+                  <div className="checkout-link">
+                      <a href="#" className="checkout-btn" id="checkout-btn">Checkout</a>
+                  </div>
+              </li>
+          </ul>
+        </div>
       </nav>
       <article className="hero">
         <img src={hamburger} alt="" className="hamburger" />
@@ -40,7 +77,7 @@ function Main() {
         <h1 className="title">Delicious food at your door step</h1>
         <p className="subtitle2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam minus velit nisi soluta, necessitatibus deleniti? Officia est voluptas rem placeat ipsa, modi molestias consequuntur distinctio blanditiis. Incidunt rerum inventore eaque?</p>
         <form className="search-holder">
-          <span className="location"><i class="las la-map-marker"></i></span>
+          <span className="location"><i className="las la-map-marker"></i></span>
           <input type="text" className="search" placeholder="Your Address" id="" />
           <button className="searchButton">Check for Food Delivery</button>
         </form>
@@ -53,123 +90,29 @@ function Main() {
       </article>
       <article className="foodIcons">
         <div>
-          <span className="foodIcon"><i class="las la-brush"></i></span>
+          <span className="foodIcon"><i className="las la-brush"></i></span>
           <h1 className="section2Nos">1052+</h1>
           <p className="section2Text">Online Orders</p>
         </div>
         <div>
-        <span className="foodIcon"><i class="las la-pizza-slice"></i></span>
+        <span className="foodIcon"><i className="las la-pizza-slice"></i></span>
           <h1 className="section2Nos">9800+</h1>
           <p className="section2Text">Satisfied Customers </p>
           </div>
         <div>
-        <span className="foodIcon"><i class="las la-mug-hot"></i></span>
+        <span className="foodIcon"><i className="las la-mug-hot"></i></span>
           <h1 className="section2Nos">3785+</h1>
           <p className="section2Text">Cup of Teas</p>
           </div>
       </article>
     </section>
     <section className="section3">
-      <article className="foodCard">
-        <img src={item1} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">Mega Restaurant</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
-      <article className="foodCard">
-        <img src={item2} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">The Fast Food</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
-      <article className="foodCard">
-        <img src={item3} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">Green Bakery</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
-      <article className="foodCard">
-        <img src={item4} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">Eat Frio</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
-      <article className="foodCard">
-        <img src={item5} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">Turkish Cousine</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
-      <article className="foodCard">
-        <img src={item6} alt="" className="foodCardImage" />
-        <div className="itemDetailsArea">
-          <div className="cardNameRating">
-          <h4 className="itemCardName">Pizzario</h4>
-          <ul className="itemCardRating">
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-            <li className="star"><i class="las la-star"></i></li>
-          </ul>
-          </div>
-          <p className="itemCardDescription">Curabitur mollis bibendum luctus..</p>
-        </div>
-      </article>
+      <FoodCards />
     </section>
     <section className="section4">
       <button className="more-food">Browse More Food Options</button>
     </section>
+    <a name="about"></a>
     <section className="section6">
     <article className="foodDescription">
         <p className="subtitle3">Basic info about food delivery.</p>
@@ -182,15 +125,15 @@ function Main() {
     </section>
     <section className="section5">
       <article className="about-card">
-      <span className="about-icon"><i class="las la-lightbulb"></i></span>
+      <span className="about-icon"><i className="las la-lightbulb"></i></span>
       <p className="about-card-text">We have new ideas for your food business.</p>
       </article>
       <article className="about-card">
-      <span className="about-icon-active"><i class="las la-bicycle"></i></span>
+      <span className="about-icon-active"><i className="las la-bicycle"></i></span>
       <p className="about-card-text">Join our amazing delivery staff.</p>
       </article>
       <article className="about-card">
-      <span className="about-icon"><i class="lar la-heart"></i></span>
+      <span className="about-icon"><i className="lar la-heart"></i></span>
       <p className="about-card-text">We love our valued food customers.</p>
       </article>
     </section>
