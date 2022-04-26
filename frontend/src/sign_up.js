@@ -9,7 +9,7 @@ function SignUp() {
     <div>
         <div id="sign-up">
 
-            <form id="form-block">
+            <form id="form-block" method='post' action='/registerUser'>
 
                 <h1 target="pad">Lorem Ipsum Dolor Sit Amet</h1>
                 <h1 target="pd">Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.</h1>
@@ -17,19 +17,19 @@ function SignUp() {
 
                 <div className="row">
                     <div className="col">
-                        <input className="form-control inp" type="text" name="" id="" placeholder="Name" />
+                        <input className="form-control inp" type="text" name="name" id="" placeholder="Name" required/>
 
                     </div>
                     <div className="col">
-                        <input className="form-control inp" type="text" name="" id="" placeholder="Phone No" />
+                        <input className="form-control inp" type="text" name="phone" id="" placeholder="Phone No" required/>
 
                     </div>
                 </div>
                 <br />
 
-                <input className="form-control inp" type="text" name="" id="" placeholder="Email address" />
+                <input className="form-control inp" type="text" name="email" id="" placeholder="Email address" required/>
                 <br />
-                <input className="form-control inp" type="text" name="" id="" placeholder="Password" />
+                <input className="form-control inp" type="password" name="password" id="" placeholder="Password" required/>
                 <br />
 
                 <div className="btn-parent">

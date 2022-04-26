@@ -21,8 +21,8 @@ function Log() {
         <h1 target="pd">Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor.</h1>
         <h1 target="pda">Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet Lorem.</h1>
 
-        <input className="inp form-control" type="text" name="" id="" placeholder="email address" /><br />
-        <input className="inp form-control" type="text" name="" id="" placeholder="password" /><br />
+        <input className="inp form-control" type="text" name="" id="" placeholder="email address" required/><br />
+        <input className="inp form-control" type="password" name="" id="" placeholder="password" required/><br />
 
         <div className="btn-parent">
             <input id="login-btn" className="btn" type="submit" value="Login" />

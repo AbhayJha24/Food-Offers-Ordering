@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import Main from './main'
 import BroMain from './bro_main'
@@ -10,7 +10,7 @@ import FoodCards from './foodCards'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path='/' exact={true} element={<Main />} />
       <Route path='/browse' exact={true} element={<BroMain />} />
@@ -18,7 +18,7 @@ ReactDOM.render(
       <Route path='/register' exact={true} element={<SignUp />} />
       <Route path='/cards' exact={true} element={<FoodCards />} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

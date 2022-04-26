@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/AbhayJha24/Food-Offers-Ordering#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1"
   }
 }
