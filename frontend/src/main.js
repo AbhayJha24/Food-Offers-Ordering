@@ -31,6 +31,25 @@ function Main() {
     }
   }
 
+  const checkOut = async () => {
+    if (Object.keys(jsCookie.get()).length == 0  || (Object.keys(jsCookie.get()).length == 1 && jsCookie.get("authtoken"))) {
+      alert("Cart Empty")
+    }
+    else{
+      const loggedin = await fetch("/authcheck")
+      if (loggedin["status"] == 200) {
+        alert("Checkout Successful")
+      }
+      else if(loggedin["status"] == 400 || loggedin["status"] == 401) {
+        // Redirect to LogIn page
+        alert("Not Logged In")
+      }
+      else{
+        alert("Some Error Occured")
+      }
+    }
+  }
+
   return (
     <>
     <section className="section1">
@@ -62,7 +81,7 @@ function Main() {
               </li>
               <li>
                   <div className="checkout-link">
-                      <a href="#" className="checkout-btn" id="checkout-btn">Checkout</a>
+                      <a href="#" className="checkout-btn" id="checkout-btn" onClick={checkOut}>Checkout</a>
                   </div>
               </li>
           </ul>

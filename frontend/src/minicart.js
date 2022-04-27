@@ -23,9 +23,15 @@ const Minicart = () => {
         }
     }
 
-    if(Object.keys(jsCookie.get()).length > 0){
+    if((Object.keys(jsCookie.get()).length > 0 && !jsCookie.get("authtoken")) || (Object.keys(jsCookie.get()).length > 1 && jsCookie.get("authtoken"))){
             return(
             Object.keys(jsCookie.get()).map( i =>{
+                if (i == "authtoken") {
+                    return(
+                        <h1></h1>
+                    )
+                }
+                else{
                 return (
                     <div className="row-minicart">
                         <div className="cart-img">
@@ -54,6 +60,7 @@ const Minicart = () => {
                         </div>
                     </div>
                 )
+            }
         })
         )
     }
