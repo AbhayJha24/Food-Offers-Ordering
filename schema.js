@@ -7,4 +7,10 @@ const users = new mongoose.Schema({
     pass: String
 });
 
-module.exports = users
+const transactions = new mongoose.Schema({
+    items: Object,
+    phone: Number,
+    email: String
+});
+
+module.exports = {users, transactions}

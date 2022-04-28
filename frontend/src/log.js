@@ -11,8 +11,8 @@ function Log() {
         e.preventDefault()
         if (form.current) {
         const logincheck = await fetch("/checklogin", {method: "POST", body: new FormData(form.current)})
-        // console.log(logincheck["status"])
         if (logincheck["status"] == 200) {
+            window.location.replace('/')
             alert("LogIn Successful")
         }
         else if(logincheck["status"] == 401){

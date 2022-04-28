@@ -18,6 +18,7 @@ import FoodCards from './foodCards'
 function Main() {
 
   const [minicart, setMinicart] = useState(false);
+  const [links, setLinks] = useState(false);
 
   const showMiniCart = () => {
     if (!minicart) {
@@ -31,18 +32,38 @@ function Main() {
     }
   }
 
+  const showLinks = () => {
+    if (!links) {
+      setLinks(true);
+    }
+  }
+
+  const removeLinks = () => {
+    if (links) {
+      setLinks(false);
+    }
+  }
+
   const checkOut = async () => {
-    if (Object.keys(jsCookie.get()).length == 0  || (Object.keys(jsCookie.get()).length == 1 && jsCookie.get("authtoken"))) {
+    if (Object.keys(jsCookie.get()).length === 0  || (Object.keys(jsCookie.get()).length === 1 && jsCookie.get("authtoken"))) {
       alert("Cart Empty")
     }
     else{
       const loggedin = await fetch("/authcheck")
-      if (loggedin["status"] == 200) {
+      if (loggedin["status"] === 200) {
+        let items = jsCookie.get()
+        delete items.authtoken
+        await fetch('/checkout', {method:'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(items), credentials: 'include'})
         alert("Checkout Successful")
+        for (let i = 0; i < Object.keys(jsCookie.get()).length; i++) {
+          if(Object.keys(jsCookie.get())[i] !== "authtoken"){
+            jsCookie.remove(Object.keys(jsCookie.get())[i])
+          }
+        }
       }
-      else if(loggedin["status"] == 400 || loggedin["status"] == 401) {
+      else if(loggedin["status"] === 400 || loggedin["status"] === 401) {
         // Redirect to LogIn page
-        alert("Not Logged In")
+        window.location.replace('/login')
       }
       else{
         alert("Some Error Occured")
@@ -61,10 +82,10 @@ function Main() {
           <li className="cart" onMouseOver={showMiniCart} onMouseLeave={removeMiniCart}>
           <i className="las la-shopping-bag"></i>
           </li>
-          <li className="user">
+          <li className="user" onMouseOver={showLinks} onMouseLeave={removeLinks}>
           <i className="las la-user"></i>
           </li>
-          <li className="drop-down">
+          <li className="drop-down" onMouseOver={showLinks} onMouseLeave={removeLinks}>
           <i className="las la-angle-down"></i>
           </li>
         </ul>
@@ -85,6 +106,20 @@ function Main() {
                   </div>
               </li>
           </ul>
+        </div>
+        <div class={`menu-links-link-${links}`} onMouseOver={showLinks} onMouseLeave={removeLinks}>
+            <ul>
+                <li>
+                    <div class="overlay-link"></div>
+                    <a href="/login"><i class="las la-key"></i>&nbsp;&nbsp;Login</a>
+                </li>
+                <li>
+                    <div class="overlay-link"></div>
+                    <a href="/register"><i class="las la-hand-point-right"></i>&nbsp;&nbsp;Register</a></li>
+                <li  onClick={() => {jsCookie.remove("authtoken"); alert("Logged Out Successfully")}}>
+                    <div class="overlay-link"></div>
+                    <i class="las la-lock"></i>&nbsp;&nbsp;Logout</li>
+            </ul>
         </div>
       </nav>
       <article className="hero">

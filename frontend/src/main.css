@@ -71,9 +71,11 @@ li.cart{
   padding-right: 15px;
 }
 
-li.cart:hover{
+li.cart:hover, li.user:hover, li.drop-down:hover{
   cursor: pointer;
 }
+
+
 
 li.user{
   font-size: 36px;
@@ -239,6 +241,53 @@ li.drop-down{
   color: #ffffff;
 }
 
+.menu-links-link-false{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80px;
+  right: 21vw;
+  visibility: hidden;
+  transition: 0.1s ease;
+}
+
+.menu-links-link-true{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80px;
+  right: 21vw;
+  visibility: visible;
+  transition: 0.1s ease;
+}
+
+.menu-links-link-true li, .menu-links-link-false li{
+  list-style: none;
+  display: block;
+  padding: 10px 40px;
+  border-bottom: solid 0.5px #e9ecef1a;
+  background: #191919;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-links-link-true li:hover, .menu-links-link-false li:hover{
+    background: linear-gradient(to right,#fc2547 50%, #ff5a00 100%);
+    transition: .5s ease;
+}
+
+.menu-links-link-true li, .menu-links-link-false li{
+  color: #ffffff;
+}
+
+.menu-links-link-true li>a, .menu-links-link-false li>a{
+  color: inherit;
+}
+
 article.hero{
   position: relative;
   overflow-x: hidden;
@@ -361,7 +410,7 @@ form.search-holder{
   border-radius: 50rem;
   padding: 10px;
   width: 45%;
-  height: 50px;
+  height: 70px;
 }
 
 span.location{
